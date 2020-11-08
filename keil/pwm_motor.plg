@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+X:\EMBBEDED PROJECTS\Neethu Prince\keil\pwm_motor.uvproj
+Project File Date:  10/22/2014
+
+<h2>Output:</h2>
+compiling new.c...
+H:\new.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=31.0 xdata=0 code=371
+creating hex file from "H:\new"...
+"H:\new" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling new.c...
+linking...
+Program Size: data=31.0 xdata=0 code=371
+creating hex file from "H:\new"...
+"H:\new" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling new.c...
+H:\new.c(69): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUZZER?NEW
+Program Size: data=31.0 xdata=0 code=365
+creating hex file from "H:\new"...
+"H:\new" - 0 Error(s), 2 Warning(s).

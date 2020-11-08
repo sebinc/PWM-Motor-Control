@@ -1,0 +1,146 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/22/2014  13:37:08  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\PROGRAM FILES (X86)\KEIL\C51\BIN\BL51.EXE main.obj TO pwm_motor
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  pwm_motor (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0031H     UNIT         ?PR?MAIN?MAIN
+            CODE    0831H     001AH     UNIT         ?PR?READ_ADC?MAIN
+            CODE    084BH     0011H     UNIT         ?PR?_DELAY?MAIN
+            CODE    085CH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   pwm_motor (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0001H
+  +--> ?PR?READ_ADC?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+?PR?READ_ADC?MAIN              -----    -----
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  pwm_motor (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2014  13:37:08  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:084BH         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  C:0831H         PUBLIC        read_adc
+  B:00B0H.4       PUBLIC        intr
+  B:00B0H.0       PUBLIC        dir
+  B:00A0H.2       PUBLIC        en
+  B:00B0H.7       PUBLIC        rd
+  B:00A0H.0       PUBLIC        motor1
+  B:00A0H.1       PUBLIC        motor2
+  B:00B0H.6       PUBLIC        wr
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        port_data
+  -------         ENDDO         
+  C:0800H         LINE#         35
+  C:0800H         LINE#         36
+  C:0800H         LINE#         40
+  C:0803H         LINE#         41
+  C:0806H         LINE#         42
+  C:0809H         LINE#         44
+  C:0809H         LINE#         45
+  C:080BH         LINE#         47
+  C:080BH         LINE#         48
+  C:080BH         LINE#         50
+  C:0810H         LINE#         52
+  C:0812H         LINE#         53
+  C:0815H         LINE#         55
+  C:0817H         LINE#         56
+  C:081EH         LINE#         57
+  C:0822H         LINE#         59
+  C:0825H         LINE#         60
+  C:0825H         LINE#         61
+  C:0827H         LINE#         62
+  C:0829H         LINE#         63
+  C:082BH         LINE#         65
+  C:082BH         LINE#         66
+  C:082DH         LINE#         67
+  C:082FH         LINE#         68
+  C:082FH         LINE#         71
+  -------         ENDPROC       MAIN
+  -------         PROC          READ_ADC
+  C:0831H         LINE#         85
+  C:0831H         LINE#         86
+  C:0831H         LINE#         87
+  C:0833H         LINE#         88
+  C:0838H         LINE#         89
+  C:083AH         LINE#         90
+  C:083CH         LINE#         91
+  C:083EH         LINE#         92
+  C:0841H         LINE#         93
+  C:0846H         LINE#         94
+  C:0848H         LINE#         95
+  C:084AH         LINE#         96
+  -------         ENDPROC       READ_ADC
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2014  13:37:08  PAGE 3
+
+
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0005H         SYMBOL        j
+  -------         ENDDO         
+  C:084BH         LINE#         100
+  C:084BH         LINE#         101
+  C:084BH         LINE#         103
+  C:084DH         LINE#         104
+  C:084DH         LINE#         105
+  C:0857H         LINE#         106
+  C:085BH         LINE#         107
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005CH BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=10.0 xdata=0 code=107
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
